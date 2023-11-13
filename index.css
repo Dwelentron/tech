@@ -1,0 +1,50 @@
+.cont{
+    display: grid;
+    grid: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    width: 90%;
+    grid-gap: 10px;
+}
+#one{
+    background-color: rgb(38, 221, 21);
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: solid 1px;
+}
+#two{
+    background-color: rgb(225, 0, 255);
+    border: solid 1px;
+}
+#three{
+    background-color: rgb(201, 129, 36);
+    border: solid 1px;
+}
+#four{
+    background-color: rgb(204, 64, 64);
+    border: solid 1px;
+}
+#five{
+    background-color: rgb(231, 157, 18);
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: solid 1px;
+}
+@media(max-width: 500px){
+    .cont{
+        display: none;
+        font-style: italic;
+    }
+}
+.nine{
+    border-radius: 40%;
+    background-color: rgb(2, 2, 2);
+    width: 40px;
+    height: 20px;
+}
+.ten{
+    border-radius: 100%;
+    background-color: white;
+    width: 18px;
+    height: 18px;
+}

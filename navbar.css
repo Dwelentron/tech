@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+/* the main navbar stats here. */
+.six{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: gray;
+}
+.seven{
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+.eight ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.eight li{
+    list-style: none;
+}
+.eight li a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 1rem;
+}
+.eight li:hover{
+    background-color: rgb(37, 34, 34);
+    text-decoration: underline;
+}
+/* example of drop down menu (incomplete) */
+.eleven{
+    display: none;
+}
+.six ul li:hover .eleven{
+    display: block;
+    position: absolute;
+    background-color: grey;
+
+}
+.six ul li:hover .eleven ul{
+    display: block;
+    padding: .1rem .1rem;
+
+}
+/* start of humberger menu (responsive).  */
+.button{
+    position: absolute;
+    top: .7rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    width: 20px;
+    height: 20px;
+    justify-content: space-between;
+}
+.button .bar{
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+/* media query to set the appearance of the humberger menu and disappearance of the menu and vice-verser (responsive) */
+@media(max-width: 500px){
+    .button {
+        display: flex;
+    
+    }
+    .eight{
+        display: none;
+        width: 100%;
+    }
+    .six{
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .six ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    .six li{
+        text-align: center;
+
+    }
+    .six li a{
+        padding: .1rem .1rem;
+    }
+    .eight.active{
+        display: flex;
+    }
+}
